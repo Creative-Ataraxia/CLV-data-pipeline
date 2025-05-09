@@ -5,8 +5,6 @@
 [![contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)]()
 
 ## 1. Overview
-────────────────────────────────────────  
-<hr style="border-top: 0.25px solid #ccc;">  
 This project is an end-to-end data engineering solution designed to help businesses quantify customer value, proactively identify high-risk, high-value segments, and generate actionable insights for revenue retention by reducing churn. The pipeline is architected with modularity, including quality checks at critical transformation layers, zone-based schema design, and extensible scaffolding for future data governance needs such as CI/CD integration, observability, cloud migration, and real-time streaming ingestion support.
 
 ### Business Problem:
