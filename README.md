@@ -24,7 +24,7 @@ Customer retention is one of the most impactful levers for sustainable revenue g
 * Final data marts for downstream analytics and dashboards
 
 ### Key Technical Components:
-* **Dagster** (orchestration) + **Airbyte** (ingestion) + **dbt** (transformation) + **DuckDB** (warehouse) + **Docker** (deployment)
+* **Dagster**(orchestration) + **Airbyte**(ingestion) + **dbt**(transformation) + **DuckDB** (warehouse) + **Docker** (deployment)
 * Modular ELT medallion architecture via `dbt` with `stg_`, `int_`, and `mart_` layers
 * Asset-based DAG tracking and orchestration via `Dagster`
 * Documented schema lineage and `dbt` testing suite
@@ -42,7 +42,7 @@ The pipeline is organized into four logical data zones: Raw, Cleaned, Transforme
 * Metabase and Streamlit as the frontend for analytics delivery
 
 The diagram below illustrates the core architecture:
-[insert diagram image here]
+![](img/Pipeline_Diagram.png)
 
 ### Zone Definitions and Flow
 * Raw: CSV files and metadata are incrementally ingested into DuckDB using Airbyte. Great Expectations validates schema, nullability, and basic distributions at this stage.
