@@ -30,7 +30,7 @@ Customer retention is one of the most impactful levers for sustainable revenue g
 * Documented schema lineage and `dbt` testing suite
 * Extendable design ready for governance, observability, cloud deployment, and CI/CD integrations
 
-
+────────────────────────────────────────
 ## 2. Project Architecture
 The pipeline is organized into four logical data zones: Raw, Cleaned, Transformed, and Served.
 
