@@ -16,7 +16,7 @@
 - [7. Roadmap](#7-roadmap)
 - [8. Conclusion & Thanks](#8-conclusion--thanks)
 
-─────────────────────────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────
 ## 1. Overview
 This project is an end-to-end data engineering solution designed to help businesses quantify customer value, proactively identify high-risk, high-value segments, and generate actionable insights for revenue retention by reducing churn. The pipeline is architected with modularity, including quality checks at critical transformation layers, zone-based schema design, and extensible scaffolding for future data governance needs such as CI/CD integration, observability, cloud migration, and real-time streaming ingestion support.
 
@@ -42,7 +42,7 @@ Customer retention is one of the most impactful levers for sustainable revenue g
 * Documented schema lineage and `dbt` testing suite
 * Extendable design ready for governance, observability, cloud deployment, and CI/CD integrations
 
-─────────────────────────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────
 ## 2. Project Architecture
 The pipeline is organized into four logical data zones: Raw, Cleaned, Transformed, and Served.
 
@@ -68,7 +68,7 @@ The diagram below illustrates the core architecture:
 * Monte Carlo monitors table freshness, schema drift, and volume anomalies across Cleaned, Transformed, and Served zones to ensure data reliability for stream analytical tasks.
 * Docker provides a consistent local runtime for reproducibility in different environments.
 
-─────────────────────────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────
 ## 3. Source Data Overview
 This project ingests a synthetic dataset representing 100,000 individual customer records that simulate the real-world data domains of a modern B2C business. Together they expose 58 raw features spanning demographics, financial posture, transactional activity, loyalty behavior, product-usage intensity, and support experience. This layout mirrors real-world data assets for building production-grade pipelines that power Customer Lifetime Value (CLV) modeling, Churn-risk scoring, Segmentation and cohort retention strategies.
 
@@ -176,7 +176,7 @@ All files are delivered as CSV with UTF-8 encoding, comma delimited, with header
 | pages_viewed       | INTEGER   |                           |
 | events_fired       | INTEGER   | Count of tracked events   |
 
-─────────────────────────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────
 ## 4. Pipeline Architecture & Data Modeling Plan
 To demonstrate end-to-end data modeling strategies aligned with stakeholder requirements, we begin with final BI-ready marts that address stakeholders' business questions and trace upstream to the necessary raw inputs.
 
@@ -242,7 +242,7 @@ src_ → stg_ → dim_ + fct_
 
 ![](img/ERD.png)
 
-─────────────────────────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────
 ## 5. Dagster Orchestration
 This project uses Dagster as the orchestration tool to manage data dependencies, enforce pipeline reliability, and operationalize the data flows from ingestion to BI-ready marts.
 
@@ -304,11 +304,11 @@ Each asset will:
 	* Action: Halt job; rollback, time-travel or snapshot
 	* Fix: Use isolated schemas for backfills; adopt blue-green swap strategy
 
-─────────────────────────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────
 ## 6. Project Structure
 > **TODO:** project folder file trees (in ascii) will be added here for reference.
 
-─────────────────────────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────
 ## 7. Roadmap
 * ☑ Phase 1: Foundation & Ingestion
 * ☑ Phase 2: Modeling & Feature Engineering
@@ -316,7 +316,7 @@ Each asset will:
 * ☐ Phase 4: Data Products & BI Delivery
 * ☐ Phase 5: Enterprise-Ready Extensions
 
-─────────────────────────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────
 ## 8. Conclusion & Thanks
 This end-to-end data engineering project demonstrates the full workflow for architecturing and implementing Customer Lifetime Value (CLV) and Churn analysis solutions, built with modularity, scalability, extensibility, and production-readiness in mind. The project's core objectives are:
 * To proactively identify high-value customers at risk of churn
