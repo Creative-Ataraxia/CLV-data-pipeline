@@ -226,7 +226,7 @@ src_ → stg_ → dim_ + fct_
 
 > View the interactive ERD on [dbdiagram.io](https://dbdiagram.io/d/681cb1575b2fc4582fc52602)
 
-[insert ERD image here]
+![](img/ERD.png)
 
 ─────────────────────────────────────────────────────────────────────────────────────────
 ## 5. Dagster Orchestration
