@@ -294,7 +294,7 @@ Each asset will:
 
 ─────────────────────────────────────────────────────────────────────────────────────────
 ## 6. Project Structure
-[Insert Project Folder File Trees here (ascii)]
+> **TODO:** Project Folder File Trees (in ascii) will be added here for reference.
 
 ─────────────────────────────────────────────────────────────────────────────────────────
 ## 7. Roadmap
