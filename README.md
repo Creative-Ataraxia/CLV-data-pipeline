@@ -72,9 +72,10 @@ This project ingests a synthetic dataset representing 100,000 individual custome
 ### Dataset Schema
 All files are delivered as CSV with UTF-8 encoding, comma delimited, with header rows.
 
-customers.csv (CRM APIs)
+### customers.csv (CRM APIs)
+
 | Column Name        | Type      | Description                 |
-|  |  |  |
+|--------------------|-----------|-----------------------------|
 | customer_id        | STRING    | Primary key                 |
 | first_name         | STRING    |                             |
 | last_name          | STRING    |                             |
@@ -86,17 +87,19 @@ customers.csv (CRM APIs)
 | country            | STRING    | ISO-3166                    |
 | marketing_opt_in   | BOOLEAN   | GDPR/CCPA compliant flag    |
 
-financial_profiles.csv (Credit-bureau exports)
+### financial_profiles.csv (Credit-bureau exports)
+
 | Column Name              | Type    | Description                   |
-|  | - | -- |
+|--------------------------|---------|-------------------------------|
 | customer_id              | STRING  | FK to customers               |
 | profile_effective_date   | DATE    | When score/income fetched     |
 | income_usd               | DECIMAL | Annual income (self-reported) |
-| credit_score             | INTEGER | 300-850 range                 |
+| credit_score             | INTEGER | 300–850 range                 |
 
-orders.csv (E-commerce APIs)
+### orders.csv (E-commerce APIs)
+
 | Column Name             | Type      | Description                    |
-| -- |  |  |
+|-------------------------|-----------|--------------------------------|
 | order_id                | STRING    | Primary key                    |
 | customer_id             | STRING    | FK to customers                |
 | order_datetime          | TIMESTAMP | Event time                     |
@@ -110,17 +113,19 @@ orders.csv (E-commerce APIs)
 | country                 | STRING    | Shipping country               |
 | loyalty_points_earned   | INTEGER   | Raw points granted on purchase |
 
-loyalty_balances.csv (Loyalty system snapshot)
+### loyalty_balances.csv (Loyalty system snapshot)
+
 | Column Name     | Type    | Notes                           |
-|  | - | - |
+|-----------------|---------|---------------------------------|
 | customer_id     | STRING  | FK to customers                 |
 | snapshot_date   | DATE    | Daily end-of-day snapshot       |
 | points_balance  | INTEGER | Current total points            |
 | loyalty_tier    | STRING  | Silver / Gold / Platinum / etc. |
 
-subscriptions.csv (Billing/ERP APIs)
+### subscriptions.csv (Billing/ERP APIs)
+
 | Column Name      | Type    | Notes                       |
-| - | - |  |
+|------------------|---------|-----------------------------|
 | subscription_id  | STRING  | Primary key                 |
 | customer_id      | STRING  | FK to customers             |
 | plan_id          | STRING  | Pricing-plan reference      |
@@ -131,9 +136,10 @@ subscriptions.csv (Billing/ERP APIs)
 | renewal_date     | DATE    | Next scheduled renewal      |
 | is_auto_renew    | BOOLEAN | True if auto-renew enabled  |
 
-support_tickets.csv (Customer-support exports)
+### support_tickets.csv (Customer-support exports)
+
 | Column Name               | Type      | Notes                                 |
-| - |  | - |
+|---------------------------|-----------|---------------------------------------|
 | ticket_id                 | STRING    | Primary key                           |
 | customer_id               | STRING    | FK to customers                       |
 | opened_datetime           | TIMESTAMP |                                       |
@@ -144,9 +150,10 @@ support_tickets.csv (Customer-support exports)
 | resolution_time_minutes   | INTEGER   | Populated on close                    |
 | csat_score                | SMALLINT  | 1–5 survey rating                     |
 
-device_sessions.csv (Web / Mobile Logs)
+### device_sessions.csv (Web / Mobile Logs)
+
 | Column Name        | Type      | Notes                     |
-|  |  | - |
+|--------------------|-----------|---------------------------|
 | session_id         | STRING    | Primary key               |
 | customer_id        | STRING    | FK to customers           |
 | session_start_ts   | TIMESTAMP |                           |
