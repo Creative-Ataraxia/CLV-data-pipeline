@@ -1,5 +1,4 @@
 # An end-to-end data pipeline for Customer Lifetime Value (CLV) and Churn analysis
-
 [![status](https://img.shields.io/badge/status-pre--alpha-orange)]()
 [![license](https://img.shields.io/badge/license-MIT-blue)]()
 [![contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)]()
@@ -31,7 +30,6 @@ Customer retention is one of the most impactful levers for sustainable revenue g
 
 
 ## 2. Project Architecture
----
 The pipeline is organized into four logical data zones: Raw, Cleaned, Transformed, and Served.
 
 ### Tech stacks used:
@@ -58,7 +56,6 @@ The diagram below illustrates the core architecture:
 
 
 ## 3. Source Data Overview
----
 This project ingests a synthetic dataset representing 100,000 individual customer records that simulate the real-world data domains of a modern B2C business. Together they expose 58 raw features spanning demographics, financial posture, transactional activity, loyalty behavior, product-usage intensity, and support experience. This layout mirrors real-world data assets for building production-grade pipelines that power Customer Lifetime Value (CLV) modeling, Churn-risk scoring, Segmentation and cohort retention strategies.
 
 ### Dataset Strengths
@@ -75,7 +72,7 @@ All files are delivered as CSV with UTF-8 encoding, comma delimited, with header
 
 customers.csv (CRM APIs)
 | Column Name        | Type      | Description                 |
-| ------------------ | --------- | --------------------------- |
+|  |  |  |
 | customer_id        | STRING    | Primary key                 |
 | first_name         | STRING    |                             |
 | last_name          | STRING    |                             |
@@ -89,7 +86,7 @@ customers.csv (CRM APIs)
 
 financial_profiles.csv (Credit-bureau exports)
 | Column Name              | Type    | Description                   |
-| ------------------------ | ------- | ----------------------------- |
+|  | - | -- |
 | customer_id              | STRING  | FK to customers               |
 | profile_effective_date   | DATE    | When score/income fetched     |
 | income_usd               | DECIMAL | Annual income (self-reported) |
@@ -97,7 +94,7 @@ financial_profiles.csv (Credit-bureau exports)
 
 orders.csv (E-commerce APIs)
 | Column Name             | Type      | Description                    |
-| ----------------------- | --------- | ------------------------------ |
+| -- |  |  |
 | order_id                | STRING    | Primary key                    |
 | customer_id             | STRING    | FK to customers                |
 | order_datetime          | TIMESTAMP | Event time                     |
@@ -113,7 +110,7 @@ orders.csv (E-commerce APIs)
 
 loyalty_balances.csv (Loyalty system snapshot)
 | Column Name     | Type    | Notes                           |
-| --------------- | ------- | ------------------------------- |
+|  | - | - |
 | customer_id     | STRING  | FK to customers                 |
 | snapshot_date   | DATE    | Daily end-of-day snapshot       |
 | points_balance  | INTEGER | Current total points            |
@@ -121,7 +118,7 @@ loyalty_balances.csv (Loyalty system snapshot)
 
 subscriptions.csv (Billing/ERP APIs)
 | Column Name      | Type    | Notes                       |
-| ---------------- | ------- | --------------------------- |
+| - | - |  |
 | subscription_id  | STRING  | Primary key                 |
 | customer_id      | STRING  | FK to customers             |
 | plan_id          | STRING  | Pricing-plan reference      |
@@ -134,7 +131,7 @@ subscriptions.csv (Billing/ERP APIs)
 
 support_tickets.csv (Customer-support exports)
 | Column Name               | Type      | Notes                                 |
-| ------------------------- | --------- | ------------------------------------- |
+| - |  | - |
 | ticket_id                 | STRING    | Primary key                           |
 | customer_id               | STRING    | FK to customers                       |
 | opened_datetime           | TIMESTAMP |                                       |
@@ -147,7 +144,7 @@ support_tickets.csv (Customer-support exports)
 
 device_sessions.csv (Web / Mobile Logs)
 | Column Name        | Type      | Notes                     |
-| ------------------ | --------- | ------------------------- |
+|  |  | - |
 | session_id         | STRING    | Primary key               |
 | customer_id        | STRING    | FK to customers           |
 | session_start_ts   | TIMESTAMP |                           |
@@ -160,7 +157,6 @@ device_sessions.csv (Web / Mobile Logs)
 
 
 ## 4. Pipeline Architecture & Data Modeling Plan
----
 To demonstrate end-to-end data modeling strategies aligned with stakeholder requirements, we begin with final BI-ready marts that address stakeholders' business questions and trace upstream to the necessary raw inputs.
 
 ### Business-Driven Mart Design
@@ -225,7 +221,6 @@ src_ → stg_ → dim_ + fct_
 
 
 ## 5. Dagster Orchestration
----
 This project uses Dagster as the orchestration tool to manage data dependencies, enforce pipeline reliability, and operationalize the data flows from ingestion to BI-ready marts.
 
 ### Core Orchestration Tasks
@@ -288,12 +283,10 @@ Each asset will:
 
 
 ## 6. Project Structure
----
 [Insert Project Folder File Trees here (ascii)]
 
 
 ## 7. Roadmap
----
 * ☐ Phase 1: Foundation & Ingestion
 * ☐ Phase 2: Modeling & Feature Engineering
 * ☐ Phase 3: Orchestration & Testing
@@ -302,7 +295,6 @@ Each asset will:
 
 
 ## 8. Conclusion
----
 This end-to-end data engineering project demonstrates the full workflow for architecturing and implementing Customer Lifetime Value (CLV) and Churn analysis solutions, built with modularity, scalability, extensibility, and production-readiness in mind. The project's core objectives are:
 * To proactively identify high-value customers at risk of churn
 * To surface actionable insights that support real retention business strategies
