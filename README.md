@@ -218,9 +218,11 @@ Table, Grain, Description
 * `stg_`, Staging, Type-casted, de-duplicated, soft filters; one table ≈ one raw file.
 
 ### Lineage Snapshot
+```ascii
 src_ → stg_ → dim_ + fct_ 
         └──→ int_* (feature engineering)
                 └──→ mart_* (stakeholder-facing views)
+```
 
 ### Warehouse Entity Relationship Diagrams
 
