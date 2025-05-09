@@ -222,7 +222,7 @@ Table, Grain, Description
 src_ → stg_ → dim_ + fct_ 
         └──→ int_* (feature engineering)
                 └──→ mart_* (stakeholder-facing views)
-```
+```                
 
 ### Warehouse Entity Relationship Diagrams
 
@@ -294,12 +294,12 @@ Each asset will:
 
 ─────────────────────────────────────────────────────────────────────────────────────────
 ## 6. Project Structure
-> **TODO:** Project Folder File Trees (in ascii) will be added here for reference.
+> **TODO:** project folder file trees (in ascii) will be added here for reference.
 
 ─────────────────────────────────────────────────────────────────────────────────────────
 ## 7. Roadmap
-* ☐ Phase 1: Foundation & Ingestion
-* ☐ Phase 2: Modeling & Feature Engineering
+* ☑️ Phase 1: Foundation & Ingestion
+* ☑️ Phase 2: Modeling & Feature Engineering
 * ☐ Phase 3: Orchestration & Testing
 * ☐ Phase 4: Data Products & BI Delivery
 * ☐ Phase 5: Enterprise-Ready Extensions
