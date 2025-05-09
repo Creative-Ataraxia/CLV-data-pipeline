@@ -24,7 +24,7 @@ Customer retention is one of the most impactful levers for sustainable revenue g
 * Final data marts for downstream analytics and dashboards
 
 ### Key Technical Components:
-* `Dagster`(orchestration) + `Airbyte`(ingestion) + `dbt`(transformation) + `DuckDB` (warehouse) + `Docker` (deployment)
+* **Dagster**(orchestration) + **Airbyte**(ingestion) + **dbt**(transformation) + **DuckDB** (warehouse) + **Docker** (deployment)
 * Modular ELT medallion architecture via `dbt` with `stg_`, `int_`, and `mart_` layers
 * Asset-based DAG tracking and orchestration via `Dagster`
 * Documented schema lineage and `dbt` testing suite
