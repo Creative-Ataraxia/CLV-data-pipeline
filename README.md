@@ -5,6 +5,18 @@
 [![license](https://img.shields.io/badge/license-MIT-blue)]()
 [![contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)]()
 
+## Contents
+
+- [1. Overview](#1-overview)
+- [2. Project Architecture](#2-project-architecture)
+- [3. Source Data Overview](#3-source-data-overview)
+- [4. Pipeline Architecture & Data Modeling Plan](#4-pipeline-architecture--data-modeling-plan)
+- [5. Dagster Orchestration](#5-dagster-orchestration)
+- [6. Project Structure](#6-project-structure)
+- [7. Roadmap](#7-roadmap)
+- [8. Conclusion & Thanks](#8-conclusion--thanks)
+
+─────────────────────────────────────────────────────────────────────────────────────────
 ## 1. Overview
 This project is an end-to-end data engineering solution designed to help businesses quantify customer value, proactively identify high-risk, high-value segments, and generate actionable insights for revenue retention by reducing churn. The pipeline is architected with modularity, including quality checks at critical transformation layers, zone-based schema design, and extensible scaffolding for future data governance needs such as CI/CD integration, observability, cloud migration, and real-time streaming ingestion support.
 
@@ -298,14 +310,14 @@ Each asset will:
 
 ─────────────────────────────────────────────────────────────────────────────────────────
 ## 7. Roadmap
-* ☑️ Phase 1: Foundation & Ingestion
-* ☑️ Phase 2: Modeling & Feature Engineering
+* ☑ Phase 1: Foundation & Ingestion
+* ☑ Phase 2: Modeling & Feature Engineering
 * ☐ Phase 3: Orchestration & Testing
 * ☐ Phase 4: Data Products & BI Delivery
 * ☐ Phase 5: Enterprise-Ready Extensions
 
 ─────────────────────────────────────────────────────────────────────────────────────────
-## 8. Conclusion
+## 8. Conclusion & Thanks
 This end-to-end data engineering project demonstrates the full workflow for architecturing and implementing Customer Lifetime Value (CLV) and Churn analysis solutions, built with modularity, scalability, extensibility, and production-readiness in mind. The project's core objectives are:
 * To proactively identify high-value customers at risk of churn
 * To surface actionable insights that support real retention business strategies
