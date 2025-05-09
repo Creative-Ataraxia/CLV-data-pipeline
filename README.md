@@ -1,5 +1,5 @@
 # Customer Lifetime Value (CLV) and Churn analysis
-## An end-to-end data engineering pipeline
+An end-to-end data engineering pipeline  
 [![status](https://img.shields.io/badge/status-pre--alpha-orange)]()
 [![license](https://img.shields.io/badge/license-MIT-blue)]()
 [![contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)]()
