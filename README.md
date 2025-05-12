@@ -47,11 +47,11 @@ Customer retention is one of the most impactful levers for sustainable revenue g
 The pipeline is organized into four logical data zones: Raw, Cleaned, Transformed, and Served.
 
 ### Tech stacks used:
-* Airbyte for incremental ingestion loading support
+* Airbyte for incremental data ingestion
 * Dagster for orchestration and scheduling
 * dbt for modular data modeling
 * DuckDB as the local analytical warehouse
-* Metabase and Streamlit as the frontend for analytics delivery
+* Metabase and Streamlit as the frontend dashboard for analytics delivery
 
 The diagram below illustrates the core architecture:
 ![](img/Pipeline_Diagram.png)
