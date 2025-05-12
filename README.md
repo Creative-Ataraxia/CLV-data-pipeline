@@ -35,26 +35,20 @@ Customer retention is one of the most impactful levers for sustainable revenue g
 * Segmentations by lifecycle stage, contract type, customer behavior, and value
 * Final data marts for downstream analytics and dashboards
 
-### Key Technical Components:
-* **Dagster**(orchestration) + **Airbyte**(ingestion) + **dbt**(transformation) + **DuckDB** (warehouse) + **Docker** (deployment)
-* Modular ELT medallion architecture via `dbt` with `stg_`, `int_`, and `mart_` layers
-* Asset-based DAG tracking and orchestration via `Dagster`
-* Documented schema lineage and `dbt` testing suite
-* Extendable design ready for governance, observability, cloud deployment, and CI/CD integrations
-
 ─────────────────────────────────────────────────────────────────────────
 ## 2. Project Architecture
 The pipeline is organized into four logical data zones: Raw, Cleaned, Transformed, and Served.
 
-### Tech stacks used:
-* Airbyte for incremental data ingestion
-* Dagster for orchestration and scheduling
-* dbt for modular data modeling
-* DuckDB as the local analytical warehouse
-* Great Expectations for data quality
-* Monte Carlo for pipeline monitoring
-* This end-to-end project is dockerized and CICD'ed using Github actions
-* Metabase and Streamlit as the frontend dashboard for analytics delivery
+### Key Technical Components:
+* **Airbyte** for incremental data ingestion
+* **Dagster** for orchestration, scheduling, and pipeline lineage
+* **dbt** for modular data modeling using medallion architectures
+* **DuckDB** as the local analytical warehouse
+* **Great Expectations** for inline data quality validation and testing
+* **Monte Carlo** for pipeline monitoring and data observability
+* **Docker** for reproducibility and deployments
+* **GitHub Actions** for CI/CD automation and end-to-end testing
+* **Metabase** and **Streamlit** for dashboarding and interactive analytics delivery
 
 The diagram below illustrates the core architecture:
 ![](img/Pipeline_Diagram.png)
