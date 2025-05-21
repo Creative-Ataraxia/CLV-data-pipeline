@@ -18,7 +18,7 @@
 
 ─────────────────────────────────────────────────────────────────────────
 ## 1. Overview
-This project is an end-to-end data engineering solution designed to help businesses quantify customer value, proactively identify high-risk, high-value segments, and generate actionable insights for revenue retention by reducing churn. The pipeline is architected with modularity, including quality checks at critical transformation layers, zone-based schema design, and extensible scaffolding for future data governance needs such as CI/CD integration, observability, cloud migration, and real-time streaming ingestion support.
+This project is a modular, end-to-end data engineering solution for quantifying customer lifetime value (CLV), identifying high-risk/high-value segments, and generating insights to reduce churn and increase retention. The pipeline follows zone-based schema design with built-in data quality checks, and is engineered for extensibility—supporting future additions like CI/CD workflows, observability, cloud migration, and real-time streaming ingestion.
 
 ### Business Problem:
 Customer retention is one of the most impactful levers for sustainable revenue growth, yet many organizations lack reliable indicators to act on churn risk. Without a data-driven view of customer value and lifecycle signals, retention strategies become reactive and inefficient.
@@ -45,7 +45,6 @@ The pipeline is organized into four logical data zones: Raw, Cleaned, Transforme
 * **dbt** for modular data modeling using medallion architectures
 * **DuckDB** as the local analytical warehouse
 * **Great Expectations** for inline data quality validation and testing
-* **Monte Carlo** for pipeline monitoring and data observability
 * **Docker** for reproducibility and deployments
 * **GitHub Actions** for CI/CD automation and end-to-end testing
 * **Metabase** and **Streamlit** for dashboarding and interactive analytics delivery
@@ -62,7 +61,6 @@ The diagram below illustrates the core architecture:
 ### Supporting Infrastructure
 * Dagster is used to orchestrate all stages, providing dependency-aware asset scheduling, failure recovery, and audit logging.
 * GitHub Actions CI/CD automates validation, dbt testing, and deployment of pipeline changes.
-* Monte Carlo monitors table freshness, schema drift, and volume anomalies across Cleaned, Transformed, and Served zones to ensure data reliability for stream analytical tasks.
 * Docker provides a consistent local runtime for reproducibility in different environments.
 
 ─────────────────────────────────────────────────────────────────────────
@@ -248,7 +246,7 @@ This project uses Dagster as the orchestration tool to manage data dependencies,
 * Pipeline Scheduling: Refresh of all raw→staging→mart layers automatically.
 * Asset Materialization: dbt models as first-class Dagster assets, enabling lineage introspection and retry handling.
 * Failure Recovery: Catch failures early during ingestion, model execution, or testing, and rerun only the failed parts to save on compute.
-* Monitoring: Raise alerts via `Great Expectations` and `Monte Carlo` when human interventions are required.
+* Monitoring: Raise alerts via `Great Expectations` when human interventions are required.
 * Observability: Log status, duration, and freshness of each asset to debug outages and regressions.
 
 ### Asset Planning
