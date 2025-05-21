@@ -50,7 +50,7 @@ The pipeline is organized into four logical data zones: Raw, Cleaned, Transforme
 * **Metabase** and **Streamlit** for dashboarding and interactive analytics delivery
 
 The diagram below illustrates the core architecture:
-![](img/Pipeline_Diagram.png)
+![](img/local_stack_diagram.png)
 
 ### Zone Definitions and Flow
 * Raw: CSV files and metadata are incrementally ingested into DuckDB using Airbyte. Great Expectations validates schema, nullability, and basic distributions at this stage.
